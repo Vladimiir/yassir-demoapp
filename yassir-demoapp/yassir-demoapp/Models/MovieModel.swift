@@ -7,6 +7,7 @@
 
 import Foundation
 
+// TODO: do I need to map the api model into business model here?
 struct MovieModel: Codable, Hashable {
     
     let adult: Bool

@@ -17,14 +17,6 @@ struct MoviesListView: View {
                 .font(.title)
                 .padding(.bottom, 20)
             
-            Button {
-                vm.fetchMoviesList()
-            } label: {
-                Text("FetchMoviesList")
-                    .font(.title3)
-            }
-            .padding(.bottom, 20)
-            
             List {
                 ForEach(vm.movies, id: \.self) { movie in
                     // TODO: use a cell instead
@@ -34,6 +26,16 @@ struct MoviesListView: View {
             }
             .listStyle(.plain)
 
+            // show current page and totalPages
+            // show There are totalResults of movies in Database
+            
+            Button {
+                vm.loadMoreMoviesButtonAction()
+            } label: {
+                Text(vm.loadMoreMoviesTitle)
+                    .font(.body)
+                    .foregroundStyle(.blue)
+            }
         }
         .padding()
     }
