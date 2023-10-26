@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3619A2F62AEA9B33000452DF /* yassir_demoappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A2F52AEA9B33000452DF /* yassir_demoappApp.swift */; };
+		3619A2F82AEA9B33000452DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A2F72AEA9B33000452DF /* ContentView.swift */; };
+		3619A2FA2AEA9B34000452DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3619A2F92AEA9B34000452DF /* Assets.xcassets */; };
+		3619A2FD2AEA9B34000452DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3619A2FC2AEA9B34000452DF /* Preview Assets.xcassets */; };
+		3619A3072AEA9B34000452DF /* yassir_demoappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3062AEA9B34000452DF /* yassir_demoappTests.swift */; };
+		3619A3112AEA9B34000452DF /* yassir_demoappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3102AEA9B34000452DF /* yassir_demoappUITests.swift */; };
+		3619A3132AEA9B34000452DF /* yassir_demoappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3122AEA9B34000452DF /* yassir_demoappUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3619A3032AEA9B34000452DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3619A2EA2AEA9B33000452DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3619A2F12AEA9B33000452DF;
+			remoteInfo = "yassir-demoapp";
+		};
+		3619A30D2AEA9B34000452DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3619A2EA2AEA9B33000452DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3619A2F12AEA9B33000452DF;
+			remoteInfo = "yassir-demoapp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3619A2F22AEA9B33000452DF /* yassir-demoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yassir-demoapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3619A2F52AEA9B33000452DF /* yassir_demoappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yassir_demoappApp.swift; sourceTree = "<group>"; };
+		3619A2F72AEA9B33000452DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3619A2F92AEA9B34000452DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3619A2FC2AEA9B34000452DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3619A3022AEA9B34000452DF /* yassir-demoappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yassir-demoappTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3619A3062AEA9B34000452DF /* yassir_demoappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yassir_demoappTests.swift; sourceTree = "<group>"; };
+		3619A30C2AEA9B34000452DF /* yassir-demoappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yassir-demoappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3619A3102AEA9B34000452DF /* yassir_demoappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yassir_demoappUITests.swift; sourceTree = "<group>"; };
+		3619A3122AEA9B34000452DF /* yassir_demoappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yassir_demoappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3619A2EF2AEA9B33000452DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3619A2FF2AEA9B34000452DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3619A3092AEA9B34000452DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3619A2E92AEA9B33000452DF = {
+			isa = PBXGroup;
+			children = (
+				3619A2F42AEA9B33000452DF /* yassir-demoapp */,
+				3619A3052AEA9B34000452DF /* yassir-demoappTests */,
+				3619A30F2AEA9B34000452DF /* yassir-demoappUITests */,
+				3619A2F32AEA9B33000452DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3619A2F32AEA9B33000452DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3619A2F22AEA9B33000452DF /* yassir-demoapp.app */,
+				3619A3022AEA9B34000452DF /* yassir-demoappTests.xctest */,
+				3619A30C2AEA9B34000452DF /* yassir-demoappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3619A2F42AEA9B33000452DF /* yassir-demoapp */ = {
+			isa = PBXGroup;
+			children = (
+				3619A2F52AEA9B33000452DF /* yassir_demoappApp.swift */,
+				3619A2F72AEA9B33000452DF /* ContentView.swift */,
+				3619A2F92AEA9B34000452DF /* Assets.xcassets */,
+				3619A2FB2AEA9B34000452DF /* Preview Content */,
+			);
+			path = "yassir-demoapp";
+			sourceTree = "<group>";
+		};
+		3619A2FB2AEA9B34000452DF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3619A2FC2AEA9B34000452DF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3619A3052AEA9B34000452DF /* yassir-demoappTests */ = {
+			isa = PBXGroup;
+			children = (
+				3619A3062AEA9B34000452DF /* yassir_demoappTests.swift */,
+			);
+			path = "yassir-demoappTests";
+			sourceTree = "<group>";
+		};
+		3619A30F2AEA9B34000452DF /* yassir-demoappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3619A3102AEA9B34000452DF /* yassir_demoappUITests.swift */,
+				3619A3122AEA9B34000452DF /* yassir_demoappUITestsLaunchTests.swift */,
+			);
+			path = "yassir-demoappUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3619A2F12AEA9B33000452DF /* yassir-demoapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3619A3162AEA9B34000452DF /* Build configuration list for PBXNativeTarget "yassir-demoapp" */;
+			buildPhases = (
+				3619A2EE2AEA9B33000452DF /* Sources */,
+				3619A2EF2AEA9B33000452DF /* Frameworks */,
+				3619A2F02AEA9B33000452DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "yassir-demoapp";
+			productName = "yassir-demoapp";
+			productReference = 3619A2F22AEA9B33000452DF /* yassir-demoapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3619A3012AEA9B34000452DF /* yassir-demoappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3619A3192AEA9B34000452DF /* Build configuration list for PBXNativeTarget "yassir-demoappTests" */;
+			buildPhases = (
+				3619A2FE2AEA9B34000452DF /* Sources */,
+				3619A2FF2AEA9B34000452DF /* Frameworks */,
+				3619A3002AEA9B34000452DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3619A3042AEA9B34000452DF /* PBXTargetDependency */,
+			);
+			name = "yassir-demoappTests";
+			productName = "yassir-demoappTests";
+			productReference = 3619A3022AEA9B34000452DF /* yassir-demoappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3619A30B2AEA9B34000452DF /* yassir-demoappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3619A31C2AEA9B34000452DF /* Build configuration list for PBXNativeTarget "yassir-demoappUITests" */;
+			buildPhases = (
+				3619A3082AEA9B34000452DF /* Sources */,
+				3619A3092AEA9B34000452DF /* Frameworks */,
+				3619A30A2AEA9B34000452DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3619A30E2AEA9B34000452DF /* PBXTargetDependency */,
+			);
+			name = "yassir-demoappUITests";
+			productName = "yassir-demoappUITests";
+			productReference = 3619A30C2AEA9B34000452DF /* yassir-demoappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3619A2EA2AEA9B33000452DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					3619A2F12AEA9B33000452DF = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					3619A3012AEA9B34000452DF = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 3619A2F12AEA9B33000452DF;
+					};
+					3619A30B2AEA9B34000452DF = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 3619A2F12AEA9B33000452DF;
+					};
+				};
+			};
+			buildConfigurationList = 3619A2ED2AEA9B33000452DF /* Build configuration list for PBXProject "yassir-demoapp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3619A2E92AEA9B33000452DF;
+			productRefGroup = 3619A2F32AEA9B33000452DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3619A2F12AEA9B33000452DF /* yassir-demoapp */,
+				3619A3012AEA9B34000452DF /* yassir-demoappTests */,
+				3619A30B2AEA9B34000452DF /* yassir-demoappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3619A2F02AEA9B33000452DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3619A2FD2AEA9B34000452DF /* Preview Assets.xcassets in Resources */,
+				3619A2FA2AEA9B34000452DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3619A3002AEA9B34000452DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3619A30A2AEA9B34000452DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3619A2EE2AEA9B33000452DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3619A2F82AEA9B33000452DF /* ContentView.swift in Sources */,
+				3619A2F62AEA9B33000452DF /* yassir_demoappApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3619A2FE2AEA9B34000452DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3619A3072AEA9B34000452DF /* yassir_demoappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3619A3082AEA9B34000452DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3619A3132AEA9B34000452DF /* yassir_demoappUITestsLaunchTests.swift in Sources */,
+				3619A3112AEA9B34000452DF /* yassir_demoappUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3619A3042AEA9B34000452DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3619A2F12AEA9B33000452DF /* yassir-demoapp */;
+			targetProxy = 3619A3032AEA9B34000452DF /* PBXContainerItemProxy */;
+		};
+		3619A30E2AEA9B34000452DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3619A2F12AEA9B33000452DF /* yassir-demoapp */;
+			targetProxy = 3619A30D2AEA9B34000452DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3619A3142AEA9B34000452DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3619A3152AEA9B34000452DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3619A3172AEA9B34000452DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"yassir-demoapp/Preview Content\"";
+				DEVELOPMENT_TEAM = SNX9U3HWNN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vladimirStasenko.yassir-demoapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3619A3182AEA9B34000452DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"yassir-demoapp/Preview Content\"";
+				DEVELOPMENT_TEAM = SNX9U3HWNN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vladimirStasenko.yassir-demoapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3619A31A2AEA9B34000452DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SNX9U3HWNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vladimirStasenko.yassir-demoappTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yassir-demoapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/yassir-demoapp";
+			};
+			name = Debug;
+		};
+		3619A31B2AEA9B34000452DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SNX9U3HWNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vladimirStasenko.yassir-demoappTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yassir-demoapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/yassir-demoapp";
+			};
+			name = Release;
+		};
+		3619A31D2AEA9B34000452DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SNX9U3HWNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vladimirStasenko.yassir-demoappUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "yassir-demoapp";
+			};
+			name = Debug;
+		};
+		3619A31E2AEA9B34000452DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SNX9U3HWNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vladimirStasenko.yassir-demoappUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "yassir-demoapp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3619A2ED2AEA9B33000452DF /* Build configuration list for PBXProject "yassir-demoapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3619A3142AEA9B34000452DF /* Debug */,
+				3619A3152AEA9B34000452DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3619A3162AEA9B34000452DF /* Build configuration list for PBXNativeTarget "yassir-demoapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3619A3172AEA9B34000452DF /* Debug */,
+				3619A3182AEA9B34000452DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3619A3192AEA9B34000452DF /* Build configuration list for PBXNativeTarget "yassir-demoappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3619A31A2AEA9B34000452DF /* Debug */,
+				3619A31B2AEA9B34000452DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3619A31C2AEA9B34000452DF /* Build configuration list for PBXNativeTarget "yassir-demoappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3619A31D2AEA9B34000452DF /* Debug */,
+				3619A31E2AEA9B34000452DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3619A2EA2AEA9B33000452DF /* Project object */;
+}
