@@ -1,2 +1,4 @@
 # yassir-demoapp
-This is demo app.
+
+I used MVVM pattern
+Swift, SwiftUI, Combine, Swift Concurrency

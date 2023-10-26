@@ -1,5 +1,5 @@
 //
-//  MovieView.swift
+//  MovieDetailedView.swift
 //  yassir-demoapp
 //
 //  Created by Vladimir Stasenko on 26.10.2023.
@@ -7,40 +7,37 @@
 
 import SwiftUI
 
-struct MovieView: View {
+struct MovieDetailedView: View {
     
-    @ObservedObject var vm: MovieViewModel
+    @ObservedObject var vm: MovieDetailedViewModel
     
     var body: some View {
-        HStack {
-            AsyncImage(url: vm.posterUrl,
+        ScrollView {
+            AsyncImage(url: vm.backdropUrl,
                        content: { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .background(Color.green)
             },
                        placeholder: {
                 ProgressView()
                     .progressViewStyle(.circular)
             })
-            .frame(width: 100, height: 150)
-            .background(Color.red)
             
             VStack(alignment: .leading) {
                 Text(vm.dataTuple.title)
-                    .font(.title3)
+                    .font(.largeTitle)
                     .bold()
-                    .background(Color.gray)
+                    .padding(.bottom, 10)
                 
                 Text(vm.dataTuple.date)
                     .font(.body)
-                    .background(Color.brown)
+                    .padding(.bottom, 10)
                 
-                Spacer()
+                Text(vm.dataTuple.description)
+                    .font(.body)
             }
-            .background(Color.blue)
+            .padding()
         }
-        .background(Color.red)
     }
 }
