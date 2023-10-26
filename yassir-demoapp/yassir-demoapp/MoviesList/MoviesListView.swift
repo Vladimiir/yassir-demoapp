@@ -19,8 +19,8 @@ struct MoviesListView: View {
             
             List {
                 ForEach(vm.movies, id: \.self) { movie in
-                    // TODO: use a cell instead
-                    Text(movie.title)
+                    // use 'posterPath' as a path to that
+                    MovieView(vm: MovieViewModel(movieModel: movie))
                         .listRowSeparator(.hidden)
                 }
             }
@@ -29,12 +29,17 @@ struct MoviesListView: View {
             // show current page and totalPages
             // show There are totalResults of movies in Database
             
-            Button {
-                vm.loadMoreMoviesButtonAction()
-            } label: {
-                Text(vm.loadMoreMoviesTitle)
-                    .font(.body)
-                    .foregroundStyle(.blue)
+            if vm.isLoadingMoreMovies {
+                ProgressView()
+                    .progressViewStyle(.circular)
+            } else {
+                Button {
+                    vm.loadMoreMoviesButtonAction()
+                } label: {
+                    Text(vm.loadMoreMoviesTitle)
+                        .font(.body)
+                        .foregroundStyle(.blue)
+                }
             }
         }
         .padding()

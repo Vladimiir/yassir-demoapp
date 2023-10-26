@@ -12,6 +12,8 @@ class MoviesListViewModel: ObservableObject {
     private var moviesService = MoviesService()
     
     @Published var movies: [MovieModel] = []
+    @Published var isLoadingMoreMovies = false
+    
     private var page = 1
     
     var loadMoreMoviesTitle: String {
@@ -27,6 +29,7 @@ class MoviesListViewModel: ObservableObject {
         
         moviesService.fetchMoviesList(page: page) { movies in
             DispatchQueue.main.async {
+                self.isLoadingMoreMovies = false
                 self.movies.append(contentsOf: movies.results)
             }
         }
@@ -34,6 +37,7 @@ class MoviesListViewModel: ObservableObject {
     
     func loadMoreMoviesButtonAction() {
         page += 1
+        isLoadingMoreMovies = true
         fetchMoviesList()
     }
 }
