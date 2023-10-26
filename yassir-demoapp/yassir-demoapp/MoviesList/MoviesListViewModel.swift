@@ -16,7 +16,9 @@ class MoviesListViewModel: ObservableObject {
     func fetchMoviesList() {
         // TODO: show loader
         moviesService.fetchMoviesList { movies in
-            self.movies = movies
+            DispatchQueue.main.async {
+                self.movies = movies.results
+            }
         }
     }
 }

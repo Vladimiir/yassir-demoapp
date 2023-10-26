@@ -26,11 +26,11 @@ struct MoviesListView: View {
             .padding(.bottom, 20)
             
             List {
-//                ForEach(vm.movies, id: \.self) { movie in
-//                    // TODO: use a cell instead
-//                    Text(movie.title)
-//                        .listRowSeparator(.hidden)
-//                }
+                ForEach(vm.movies, id: \.self) { movie in
+                    // TODO: use a cell instead
+                    Text(movie.title)
+                        .listRowSeparator(.hidden)
+                }
             }
             .listStyle(.plain)
 

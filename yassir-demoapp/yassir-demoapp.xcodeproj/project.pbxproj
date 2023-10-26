@@ -19,6 +19,7 @@
 		3619A32C2AEAAAC3000452DF /* ServicesEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A32B2AEAAAC3000452DF /* ServicesEndpoints.swift */; };
 		3619A32F2AEAAF16000452DF /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A32E2AEAAF16000452DF /* MovieModel.swift */; };
 		3619A3312AEAB308000452DF /* MoviesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3302AEAB308000452DF /* MoviesListModel.swift */; };
+		3619A3332AEAB8F8000452DF /* MoviesListErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3322AEAB8F8000452DF /* MoviesListErrorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		3619A32B2AEAAAC3000452DF /* ServicesEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesEndpoints.swift; sourceTree = "<group>"; };
 		3619A32E2AEAAF16000452DF /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		3619A3302AEAB308000452DF /* MoviesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListModel.swift; sourceTree = "<group>"; };
+		3619A3322AEAB8F8000452DF /* MoviesListErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListErrorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			children = (
 				3619A3302AEAB308000452DF /* MoviesListModel.swift */,
 				3619A32E2AEAAF16000452DF /* MovieModel.swift */,
+				3619A3322AEAB8F8000452DF /* MoviesListErrorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				3619A32A2AEAA540000452DF /* MoviesService.swift in Sources */,
 				3619A3272AEAA45F000452DF /* MoviesListViewModel.swift in Sources */,
 				3619A3312AEAB308000452DF /* MoviesListModel.swift in Sources */,
+				3619A3332AEAB8F8000452DF /* MoviesListErrorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

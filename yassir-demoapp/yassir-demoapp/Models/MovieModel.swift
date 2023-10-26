@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieModel: Codable {
+struct MovieModel: Codable, Hashable {
     
     let adult: Bool
     let backdropPath: String
@@ -18,7 +18,7 @@ struct MovieModel: Codable {
     let overview: String
     let popularity: Float
     let posterPath: String
-    let releaseDate: Date // 2023-02-15 // TODO: or String map into Date later?
+    let releaseDate: String // 2023-02-15 // TODO: map into Date
     let title: String
     let video: Bool
     let voteAverage: Float
