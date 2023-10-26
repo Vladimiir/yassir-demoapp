@@ -25,9 +25,20 @@ struct MoviesListView: View {
                     }
                 }
                 .listStyle(.plain)
-
+                
                 // show current page and totalPages
                 // show There are totalResults of movies in Database
+                
+                // update UI, make it more modern?
+                
+                Picker("Sort by...", selection: $vm.selectedSorting) {
+                    ForEach(vm.sortingList, id: \.self) {
+                        Text($0)
+                    }
+                }
+                .onChange(of: vm.selectedSorting) { _, _ in
+                    self.vm.sortByAction()
+                }
                 
                 if vm.isLoadingMoreMovies {
                     ProgressView()
@@ -47,13 +58,6 @@ struct MoviesListView: View {
         }
     }
 }
-
-// List of movies
-    // Detailed info view
-// AuthenticationService
-// MoviesService
-
-// Write some unit tests
 
 #Preview {
     MoviesListView()

@@ -12,6 +12,7 @@ class MovieDetailedViewModel: ObservableObject {
     let movieModel: MovieModel
     
     var backdropUrl: URL? {
+        // TODO: handle 'nil' path - show no image
         ServicesEndpoints.imageUrl(with: movieModel.backdropPath)
     }
     

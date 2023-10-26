@@ -23,7 +23,9 @@ class ServicesEndpoints {
 //        return URL(string: path)
 //    }
     
-    static func imageUrl(with imgPath: String) -> URL? {
+    static func imageUrl(with imgPath: String?) -> URL? {
+        guard let imgPath else { return nil }
+        
         var path = imageSmallPath
         path.append(imgPath)
         return URL(string: path)

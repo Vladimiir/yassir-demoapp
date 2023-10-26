@@ -7,12 +7,16 @@
 
 import Foundation
 
+// TODO: use protocol
 class MoviesService: ObservableObject {
     
     func fetchMoviesList(page: Int,
+                         sortBy: String,
                          handler: @escaping (MoviesListModel) -> ()){
+        // TODO: replace it with 'addParam' func from the service
         var moviesPath = ServicesEndpoints.moviesPath
         moviesPath.append("?page=\(page)")
+        moviesPath.append("&sort_by=\(sortBy)")
         
         guard let url = URL(string: moviesPath) else {
             // TODO: show an error?
@@ -20,6 +24,7 @@ class MoviesService: ObservableObject {
             return
         }
         
+        // TODO: move it to a base service to perform requests there without writing it everytime
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("Bearer \(ServicesEndpoints.apiReadAccessToken)", forHTTPHeaderField: "Authorization")
@@ -40,5 +45,32 @@ class MoviesService: ObservableObject {
         }
         
         task.resume()
+    }
+}
+
+extension MoviesService {
+    
+    enum SortBy: String {
+        case popularityAsc = "popularity.asc"
+        case popularityDesc = "popularity.desc"
+        case revenueAsc = "revenue.asc"
+        case revenueDesc = "revenue.desc"
+        case primaryReleaseDateAsc = "primary_release_date.asc"
+        case primaryReleaseDateDesc = "primary_release_date.desc"
+        case voteAverageAsc = "vote_average.asc"
+        case voteAverageDesc = "vote_average.desc"
+        case voteCountAsc = "vote_count.asc"
+        case voteCountDesc = "vote_count.desc"
+        
+        static let allCases: [SortBy] = [.popularityAsc,
+                                         .popularityDesc,
+                                         .revenueAsc,
+                                         .revenueDesc,
+                                         .primaryReleaseDateAsc,
+                                         .primaryReleaseDateDesc,
+                                         .voteAverageAsc,
+                                         .voteAverageDesc,
+                                         .voteCountAsc,
+                                         .voteCountDesc]
     }
 }
