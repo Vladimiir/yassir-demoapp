@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3619A2F62AEA9B33000452DF /* yassir_demoappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A2F52AEA9B33000452DF /* yassir_demoappApp.swift */; };
-		3619A2F82AEA9B33000452DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A2F72AEA9B33000452DF /* ContentView.swift */; };
 		3619A2FA2AEA9B34000452DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3619A2F92AEA9B34000452DF /* Assets.xcassets */; };
 		3619A2FD2AEA9B34000452DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3619A2FC2AEA9B34000452DF /* Preview Assets.xcassets */; };
 		3619A3072AEA9B34000452DF /* yassir_demoappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3062AEA9B34000452DF /* yassir_demoappTests.swift */; };
 		3619A3112AEA9B34000452DF /* yassir_demoappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3102AEA9B34000452DF /* yassir_demoappUITests.swift */; };
 		3619A3132AEA9B34000452DF /* yassir_demoappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3122AEA9B34000452DF /* yassir_demoappUITestsLaunchTests.swift */; };
+		3619A3252AEAA45A000452DF /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3242AEAA45A000452DF /* MoviesListView.swift */; };
+		3619A3272AEAA45F000452DF /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3262AEAA45F000452DF /* MoviesListViewModel.swift */; };
+		3619A32A2AEAA540000452DF /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619A3292AEAA540000452DF /* MoviesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		3619A2F22AEA9B33000452DF /* yassir-demoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yassir-demoapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3619A2F52AEA9B33000452DF /* yassir_demoappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yassir_demoappApp.swift; sourceTree = "<group>"; };
-		3619A2F72AEA9B33000452DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3619A2F92AEA9B34000452DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3619A2FC2AEA9B34000452DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3619A3022AEA9B34000452DF /* yassir-demoappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yassir-demoappTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,10 @@
 		3619A30C2AEA9B34000452DF /* yassir-demoappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yassir-demoappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3619A3102AEA9B34000452DF /* yassir_demoappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yassir_demoappUITests.swift; sourceTree = "<group>"; };
 		3619A3122AEA9B34000452DF /* yassir_demoappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yassir_demoappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3619A3222AEAA3E9000452DF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3619A3242AEAA45A000452DF /* MoviesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListView.swift; sourceTree = "<group>"; };
+		3619A3262AEAA45F000452DF /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
+		3619A3292AEAA540000452DF /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 		3619A2E92AEA9B33000452DF = {
 			isa = PBXGroup;
 			children = (
+				3619A3222AEAA3E9000452DF /* README.md */,
 				3619A2F42AEA9B33000452DF /* yassir-demoapp */,
 				3619A3052AEA9B34000452DF /* yassir-demoappTests */,
 				3619A30F2AEA9B34000452DF /* yassir-demoappUITests */,
@@ -95,7 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				3619A2F52AEA9B33000452DF /* yassir_demoappApp.swift */,
-				3619A2F72AEA9B33000452DF /* ContentView.swift */,
+				3619A3232AEAA450000452DF /* MoviesList */,
+				3619A3282AEAA536000452DF /* Services */,
 				3619A2F92AEA9B34000452DF /* Assets.xcassets */,
 				3619A2FB2AEA9B34000452DF /* Preview Content */,
 			);
@@ -125,6 +132,23 @@
 				3619A3122AEA9B34000452DF /* yassir_demoappUITestsLaunchTests.swift */,
 			);
 			path = "yassir-demoappUITests";
+			sourceTree = "<group>";
+		};
+		3619A3232AEAA450000452DF /* MoviesList */ = {
+			isa = PBXGroup;
+			children = (
+				3619A3242AEAA45A000452DF /* MoviesListView.swift */,
+				3619A3262AEAA45F000452DF /* MoviesListViewModel.swift */,
+			);
+			path = MoviesList;
+			sourceTree = "<group>";
+		};
+		3619A3282AEAA536000452DF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3619A3292AEAA540000452DF /* MoviesService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3619A2F82AEA9B33000452DF /* ContentView.swift in Sources */,
+				3619A3252AEAA45A000452DF /* MoviesListView.swift in Sources */,
 				3619A2F62AEA9B33000452DF /* yassir_demoappApp.swift in Sources */,
+				3619A32A2AEAA540000452DF /* MoviesService.swift in Sources */,
+				3619A3272AEAA45F000452DF /* MoviesListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +463,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vladimirStasenko.yassir-demoapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +495,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vladimirStasenko.yassir-demoapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
