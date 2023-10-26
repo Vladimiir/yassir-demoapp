@@ -11,9 +11,10 @@ class MoviesListViewModel: ObservableObject {
     
     private var moviesService = MoviesService()
     
-    @Published var movies: [String] = []
+    @Published var movies: [MovieModel] = []
     
     func fetchMoviesList() {
+        // TODO: show loader
         moviesService.fetchMoviesList { movies in
             self.movies = movies
         }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MoviesListView: View {
     
-    var vm = MoviesListViewModel()
+    @StateObject var vm = MoviesListViewModel()
     
     var body: some View {
         VStack {
@@ -26,11 +26,13 @@ struct MoviesListView: View {
             .padding(.bottom, 20)
             
             List {
-                ForEach(vm.movies, id: \.self) { movie in
-                    // TODO: use a cell instead
-                    Text(movie)
-                }
+//                ForEach(vm.movies, id: \.self) { movie in
+//                    // TODO: use a cell instead
+//                    Text(movie.title)
+//                        .listRowSeparator(.hidden)
+//                }
             }
+            .listStyle(.plain)
 
         }
         .padding()
