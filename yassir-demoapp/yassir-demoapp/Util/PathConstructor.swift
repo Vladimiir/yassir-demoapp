@@ -27,7 +27,7 @@ struct URLConstructor {
             newPath.append("\($0.key.rawValue)=\($0.value)")
         }
         
-        return newPath
+        return URL(string: newPath)
     }
     
     static func imageUrl(with imgPath: String?) -> URL? {

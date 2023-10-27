@@ -22,6 +22,11 @@ protocol IMoviesService {
 
 class MoviesService: ObservableObject, IMoviesService {
     
+    // Mostly for assigning values I prefer to use DI (Swinject, Typhoon, swift-dependencies)
+    // For SwiftUI in the last projet I used "https://github.com/pointfreeco/swift-dependencies"
+    // But for the demo project I will create dependencies manually
+    let baseService: IBaseService = BaseService()
+    
     func fetchMoviesList(page: Int,
                          sortBy: String,
                          handler: @escaping (MoviesListModel?) -> ()) {
@@ -34,30 +39,10 @@ class MoviesService: ObservableObject, IMoviesService {
             return
         }
         
-        // TODO: move it to a base service to perform requests there without writing it everytime
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("Bearer \(ServicesEndpoints.apiReadAccessToken)", forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .formatted(.yyyyMMdd)
-                
-                if let movies = try? decoder.decode(MoviesListModel.self, from: data) {
-                    handler(movies)
-                } else if let errorModel = try? JSONDecoder().decode(MoviesListErrorModel.self, from: data) {
-                    print(errorModel)
-                } else {
-                    print("Invalid Response")
-                }
-            } else if let error = error {
-                print("HTTP Request Failed \(error)")
-            }
+        baseService.performRequest(with: url,
+                                   type: MoviesListModel.self) { result in
+            handler(result as? MoviesListModel)
         }
-        
-        task.resume()
     }
 }
 

@@ -9,17 +9,17 @@ import Foundation
 
 protocol IBaseService {
     
+    /// Perform url with specified paramenters
+    func performRequest(with url: URL,
+                        type: Decodable.Type,
+                        handler: @escaping (Any?) -> ())
 }
 
 class BaseService: ObservableObject, IBaseService {
     
-    func performRequest(handler: @escaping (MoviesListModel?) -> ()) {
-        guard let url = URL(string: moviesPath) else {
-            handler(nil)
-            return
-        }
-        
-        // TODO: move it to a base service to perform requests there without writing it everytime
+    func performRequest(with url: URL,
+                        type: Decodable.Type,
+                        handler: @escaping (Any?) -> ()) {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("Bearer \(ServicesEndpoints.apiReadAccessToken)", forHTTPHeaderField: "Authorization")
@@ -30,10 +30,8 @@ class BaseService: ObservableObject, IBaseService {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .formatted(.yyyyMMdd)
                 
-                if let movies = try? decoder.decode(MoviesListModel.self, from: data) {
-                    handler(movies)
-                } else if let errorModel = try? JSONDecoder().decode(MoviesListErrorModel.self, from: data) {
-                    print(errorModel)
+                if let result = try? decoder.decode(type, from: data) {
+                    handler(result)
                 } else {
                     print("Invalid Response")
                 }
