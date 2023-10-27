@@ -13,10 +13,9 @@ class MoviesService: ObservableObject {
     func fetchMoviesList(page: Int,
                          sortBy: String,
                          handler: @escaping (MoviesListModel) -> ()){
-        // TODO: replace it with 'addParam' func from the service
-        var moviesPath = ServicesEndpoints.moviesPath
-        moviesPath.append("?page=\(page)")
-        moviesPath.append("&sort_by=\(sortBy)")
+        let moviesPath = PathConstructor.addParams(params: [.page : String(page),
+                                                            .sortBy : sortBy],
+                                                   for: ServicesEndpoints.moviesPath)
         
         guard let url = URL(string: moviesPath) else {
             // TODO: show an error?
