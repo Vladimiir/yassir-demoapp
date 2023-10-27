@@ -59,7 +59,15 @@ struct MoviesListView: View {
                     }
                 }
             }
-            .navigationTitle("MoviesListView")
+            .navigationBarTitle(Text(""), displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Image("tmdbLogo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.bottom, 10)
+                }
+            }
             .padding()
         }
     }

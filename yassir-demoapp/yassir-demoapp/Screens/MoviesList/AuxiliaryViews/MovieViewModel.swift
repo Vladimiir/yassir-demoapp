@@ -18,8 +18,11 @@ class MovieViewModel: ObservableObject {
     }
     
     var posterUrl: URL? {
-        // TODO: handle 'nil' path - show no image
         ServicesEndpoints.imageUrl(with: movieModel.posterPath)
+    }
+    
+    var isImageNotAvailable: Bool {
+        movieModel.posterPath == nil
     }
     
     init(movieModel: MovieModel) {

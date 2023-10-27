@@ -13,17 +13,23 @@ struct MovieView: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: vm.posterUrl,
-                       content: { image in
-                image
+            if vm.isImageNotAvailable {
+                Image("NoImage")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-            },
-                       placeholder: {
-                ProgressView()
-                    .progressViewStyle(.circular)
-            })
-            .frame(width: 100, height: 150)
+            } else {
+                AsyncImage(url: vm.posterUrl,
+                           content: { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                },
+                           placeholder: {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                })
+                .frame(width: 100, height: 150)
+            }
             
             VStack(alignment: .leading) {
                 Text(vm.dataTuple.title)
