@@ -13,16 +13,22 @@ struct MovieDetailedView: View {
     
     var body: some View {
         ScrollView {
-            AsyncImage(url: vm.backdropUrl,
-                       content: { image in
-                image
+            if vm.isImageNotAvailable {
+                Image("NoImage")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-            },
-                       placeholder: {
-                ProgressView()
-                    .progressViewStyle(.circular)
-            })
+            } else {
+                AsyncImage(url: vm.backdropUrl,
+                           content: { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                },
+                           placeholder: {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                })
+            }
             
             VStack(alignment: .leading) {
                 Text(vm.dataTuple.title)

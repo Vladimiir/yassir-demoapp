@@ -12,7 +12,6 @@ class MovieDetailedViewModel: ObservableObject {
     let movieModel: MovieModel
     
     var backdropUrl: URL? {
-        // TODO: handle 'nil' path - show no image
         ServicesEndpoints.imageUrl(with: movieModel.backdropPath)
     }
     
@@ -22,6 +21,10 @@ class MovieDetailedViewModel: ObservableObject {
         (movieModel.title,
          DatesManager.string(from: movieModel.releaseDate, with: DateFormatter.MMMyyyy),
          movieModel.overview)
+    }
+    
+    var isImageNotAvailable: Bool {
+        movieModel.backdropPath == nil
     }
     
     init(movieModel: MovieModel) {
