@@ -9,8 +9,9 @@ import Foundation
 
 struct DatesManager {
     
-    static func string(from date: Date,
+    static func string(from date: Date?,
                        with formatter: DateFormatter) -> String {
-        formatter.string(from: date)
+        guard let date else { return "" }
+        return formatter.string(from: date)
     }
 }

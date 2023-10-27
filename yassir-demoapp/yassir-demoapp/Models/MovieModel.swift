@@ -7,7 +7,6 @@
 
 import Foundation
 
-// TODO: do I need to map the api model into business model here?
 struct MovieModel: Codable, Hashable {
     
     let adult: Bool
@@ -19,7 +18,7 @@ struct MovieModel: Codable, Hashable {
     let overview: String
     let popularity: Float
     let posterPath: String?
-    let releaseDate: Date
+    let releaseDate: Date?
     let title: String
     let video: Bool
     let voteAverage: Float
@@ -40,5 +39,24 @@ struct MovieModel: Codable, Hashable {
         case video
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        adult = ((try? container.decode(Bool.self, forKey: .adult)) != nil)
+        backdropPath = try? container.decode(String.self, forKey: .backdropPath)
+        genreIds = try! container.decode([Int].self, forKey: .genreIds)
+        id = try! container.decode(Int.self, forKey: .id)
+        originalLanguage = try! container.decode(String.self, forKey: .originalLanguage)
+        originalTitle = try! container.decode(String.self, forKey: .originalTitle)
+        overview = try! container.decode(String.self, forKey: .overview)
+        popularity = try! container.decode(Float.self, forKey: .popularity)
+        posterPath = try? container.decode(String.self, forKey: .posterPath)
+        releaseDate = try? container.decode(Date.self, forKey: .releaseDate)
+        title = try! container.decode(String.self, forKey: .title)
+        video = ((try? container.decode(Bool.self, forKey: .video)) != nil)
+        voteAverage = try! container.decode(Float.self, forKey: .voteAverage)
+        voteCount = try! container.decode(Int.self, forKey: .voteCount)
     }
 }
