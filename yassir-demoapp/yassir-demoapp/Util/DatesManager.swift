@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct DatesManager {
+    
+    static func string(from date: Date,
+                       with formatter: DateFormatter) -> String {
+        formatter.string(from: date)
+    }
+}

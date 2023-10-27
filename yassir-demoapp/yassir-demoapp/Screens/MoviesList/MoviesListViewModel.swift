@@ -15,7 +15,9 @@ class MoviesListViewModel: ObservableObject {
     // But for the demo project I will create dependencies manually
     private var moviesService = MoviesService()
     
+    @Published var moviesListModel: MoviesListModel?
     @Published var movies: [MovieModel] = []
+    @Published var isLoadingMovies = false
     @Published var isLoadingMoreMovies = false
     @Published var selectedSorting = MoviesService.SortBy.popularityDesc.rawValue
     let sortingList = MoviesService.SortBy.allCases.map { $0.rawValue }
@@ -26,18 +28,29 @@ class MoviesListViewModel: ObservableObject {
         "Load 20 movies more..."
     }
     
+    var pageDescTitle: String {
+        guard let moviesListModel else { return "" }
+        return "Page \(moviesListModel.page) from \(moviesListModel.totalPages)"
+    }
+    
+    var canShowPageCount: Bool {
+        moviesListModel != nil
+    }
+    
     init() {
+        // The initial loading
+        isLoadingMovies = true
         fetchMoviesList()
     }
     
     func fetchMoviesList() {
-        // TODO: show loader
-        
         moviesService.fetchMoviesList(page: page,
-                                      sortBy: selectedSorting) { movies in
+                                      sortBy: selectedSorting) { moviesListModel in
             DispatchQueue.main.async {
                 self.isLoadingMoreMovies = false
-                self.movies.append(contentsOf: movies.results)
+                self.isLoadingMovies = false
+                self.moviesListModel = moviesListModel
+                self.movies.append(contentsOf: moviesListModel.results)
             }
         }
     }

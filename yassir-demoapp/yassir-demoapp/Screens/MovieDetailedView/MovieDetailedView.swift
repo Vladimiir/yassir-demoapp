@@ -39,5 +39,7 @@ struct MovieDetailedView: View {
             }
             .padding()
         }
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
