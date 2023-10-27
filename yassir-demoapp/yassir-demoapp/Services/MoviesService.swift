@@ -18,6 +18,9 @@ protocol IMoviesService {
     func fetchMoviesList(page: Int,
                          sortBy: String,
                          handler: @escaping (MoviesListModel?) -> ())
+    
+    func fetchMovieDetails(id: Int,
+                           handler: @escaping (MovieDetailsModel?) -> ())
 }
 
 class MoviesService: ObservableObject, IMoviesService {
@@ -30,9 +33,9 @@ class MoviesService: ObservableObject, IMoviesService {
     func fetchMoviesList(page: Int,
                          sortBy: String,
                          handler: @escaping (MoviesListModel?) -> ()) {
-        let url = URLConstructor.addParams(params: [.page : String(page),
-                                                    .sortBy : sortBy],
-                                           for: ServicesEndpoints.moviesPath)
+        let url = URLConstructor.addParams(to: ServicesEndpoints.moviesPath,
+                                           params: [.page : String(page),
+                                                    .sortBy : sortBy])
         
         guard let url else {
             handler(nil)
@@ -42,6 +45,22 @@ class MoviesService: ObservableObject, IMoviesService {
         baseService.performRequest(with: url,
                                    type: MoviesListModel.self) { result in
             handler(result as? MoviesListModel)
+        }
+    }
+    
+    func fetchMovieDetails(id: Int,
+                           handler: @escaping (MovieDetailsModel?) -> ()) {
+        let url = URLConstructor.addParams(to: ServicesEndpoints.movieDetailsPath,
+                                           addToPath: String(id))
+        
+        guard let url else {
+            handler(nil)
+            return
+        }
+        
+        baseService.performRequest(with: url,
+                                   type: MovieDetailsModel.self) { result in
+            handler(result as? MovieDetailsModel)
         }
     }
 }

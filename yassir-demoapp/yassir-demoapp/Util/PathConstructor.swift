@@ -14,9 +14,11 @@ struct URLConstructor {
         case sortBy = "sort_by"
     }
     
-    static func addParams(params: [Params: String],
-                          for path: String) -> URL? {
-        var newPath = ServicesEndpoints.moviesPath
+    static func addParams(to path: String,
+                          addToPath: String = "",
+                          params: [Params: String] = [:]) -> URL? {
+        var newPath = path
+        newPath.append(addToPath)
         
         params.forEach {
             if let last = newPath.last,
