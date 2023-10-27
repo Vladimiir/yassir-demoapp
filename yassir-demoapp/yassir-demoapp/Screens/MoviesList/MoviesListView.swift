@@ -14,7 +14,15 @@ struct MoviesListView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                if vm.isLoadingMovies {
+                if vm.isLoadingMoviesFailed {
+                    Button {
+                        vm.retryMoviesLoadingButtonAction()
+                    } label: {
+                        Text(vm.retryLoadingMoviesTitle)
+                            .font(.title)
+                            .foregroundStyle(.blue)
+                    }
+                } else if vm.isLoadingMovies {
                     ProgressView()
                         .progressViewStyle(.circular)
                 } else {

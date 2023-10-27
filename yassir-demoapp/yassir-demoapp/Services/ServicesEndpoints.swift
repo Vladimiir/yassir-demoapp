@@ -13,13 +13,6 @@ class ServicesEndpoints {
     static let apiReadAccessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MmVjMmIxOTBhMTFmYmRlNTljYzg5MDFiNTQyZTlmNiIsInN1YiI6IjY1M2E3OTMzMjRmMmNlMDBlMjZhZTMzMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZN_-7reaFksVPEJSJjclCaxMNi9Ku2HoxhzPoMm4inE"
     
     static let moviesPath = "https://api.themoviedb.org/3/discover/movie?"
+    static let movieDetailsPath = "https://api.themoviedb.org/3/movie/"
     static let imageSmallPath = "https://image.tmdb.org/t/p/w500"
-    
-    static func imageUrl(with imgPath: String?) -> URL? {
-        guard let imgPath else { return nil }
-        
-        var path = imageSmallPath
-        path.append(imgPath)
-        return URL(string: path)
-    }
 }

@@ -12,7 +12,7 @@ class MovieDetailedViewModel: ObservableObject {
     let movieModel: MovieModel
     
     var backdropUrl: URL? {
-        ServicesEndpoints.imageUrl(with: movieModel.backdropPath)
+        URLConstructor.imageUrl(with: movieModel.backdropPath)
     }
     
     var dataTuple: (title: String,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PathConstructor {
+struct URLConstructor {
     
     enum Params: String {
         case page
@@ -15,7 +15,7 @@ struct PathConstructor {
     }
     
     static func addParams(params: [Params: String],
-                          for path: String) -> String {
+                          for path: String) -> URL? {
         var newPath = ServicesEndpoints.moviesPath
         
         params.forEach {
@@ -28,5 +28,13 @@ struct PathConstructor {
         }
         
         return newPath
+    }
+    
+    static func imageUrl(with imgPath: String?) -> URL? {
+        guard let imgPath else { return nil }
+        
+        var path = ServicesEndpoints.imageSmallPath
+        path.append(imgPath)
+        return URL(string: path)
     }
 }

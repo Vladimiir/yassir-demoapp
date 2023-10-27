@@ -17,6 +17,7 @@ struct MovieView: View {
                 Image("NoImage")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 150)
             } else {
                 AsyncImage(url: vm.posterUrl,
                            content: { image in

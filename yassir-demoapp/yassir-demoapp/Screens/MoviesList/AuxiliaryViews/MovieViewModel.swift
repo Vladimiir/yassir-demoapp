@@ -18,7 +18,7 @@ class MovieViewModel: ObservableObject {
     }
     
     var posterUrl: URL? {
-        ServicesEndpoints.imageUrl(with: movieModel.posterPath)
+        URLConstructor.imageUrl(with: movieModel.posterPath)
     }
     
     var isImageNotAvailable: Bool {

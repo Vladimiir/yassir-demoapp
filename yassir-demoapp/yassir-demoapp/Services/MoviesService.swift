@@ -7,19 +7,30 @@
 
 import Foundation
 
-// TODO: use protocol
-class MoviesService: ObservableObject {
+/// Using abstraction will also allow us to simplify writing unit-tests
+protocol IMoviesService {
+    
+    /// Fetch movies data from provided page and other params
+    /// - Parameters:
+    ///   - page: number of the page from 1
+    ///   - sortBy: sorting movies
+    ///   - handler: completion handler
+    func fetchMoviesList(page: Int,
+                         sortBy: String,
+                         handler: @escaping (MoviesListModel?) -> ())
+}
+
+class MoviesService: ObservableObject, IMoviesService {
     
     func fetchMoviesList(page: Int,
                          sortBy: String,
-                         handler: @escaping (MoviesListModel) -> ()){
-        let moviesPath = PathConstructor.addParams(params: [.page : String(page),
-                                                            .sortBy : sortBy],
-                                                   for: ServicesEndpoints.moviesPath)
+                         handler: @escaping (MoviesListModel?) -> ()) {
+        let url = URLConstructor.addParams(params: [.page : String(page),
+                                                    .sortBy : sortBy],
+                                           for: ServicesEndpoints.moviesPath)
         
-        guard let url = URL(string: moviesPath) else {
-            // TODO: show an error?
-            handler(.init(page: 0, results: [], totalPages: 0, totalResults: 0))
+        guard let url else {
+            handler(nil)
             return
         }
         
