@@ -122,10 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				3619A2F52AEA9B33000452DF /* yassir_demoappApp.swift */,
-				369A38A12AEBBF78004EC790 /* Util */,
 				3619A33B2AEAD06F000452DF /* Screens */,
 				3619A3282AEAA536000452DF /* Services */,
 				3619A32D2AEAAF0D000452DF /* Models */,
+				369A38A12AEBBF78004EC790 /* Util */,
 				3619A2F92AEA9B34000452DF /* Assets.xcassets */,
 				3619A2FB2AEA9B34000452DF /* Preview Content */,
 			);

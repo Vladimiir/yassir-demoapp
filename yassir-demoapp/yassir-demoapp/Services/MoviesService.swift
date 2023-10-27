@@ -35,7 +35,7 @@ class MoviesService: ObservableObject {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .formatted(.yyyyMMdd)
                 
-                if let movies = try? JSONDecoder().decode(MoviesListModel.self, from: data) {
+                if let movies = try? decoder.decode(MoviesListModel.self, from: data) {
                     handler(movies)
                 } else if let errorModel = try? JSONDecoder().decode(MoviesListErrorModel.self, from: data) {
                     print(errorModel)
