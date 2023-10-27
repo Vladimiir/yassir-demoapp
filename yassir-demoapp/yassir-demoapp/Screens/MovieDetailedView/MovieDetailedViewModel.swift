@@ -20,7 +20,7 @@ class MovieDetailedViewModel: ObservableObject {
                     date: String,
                     description: String) {
         (movieModel.title,
-         movieModel.releaseDate,
+         DatesManager.string(from: movieModel.releaseDate, with: DateFormatter.yyyyMMdd),
          movieModel.overview)
     }
     

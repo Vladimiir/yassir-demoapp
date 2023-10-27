@@ -19,7 +19,7 @@ struct MovieModel: Codable, Hashable {
     let overview: String
     let popularity: Float
     let posterPath: String?
-    let releaseDate: String // 2023-02-15 // TODO: map into Date
+    let releaseDate: Date
     let title: String
     let video: Bool
     let voteAverage: Float

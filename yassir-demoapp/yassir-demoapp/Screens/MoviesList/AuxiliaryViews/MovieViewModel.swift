@@ -14,7 +14,7 @@ class MovieViewModel: ObservableObject {
     var dataTuple: (title: String, 
                     date: String) {
         (movieModel.title,
-         movieModel.releaseDate)
+         DatesManager.string(from: movieModel.releaseDate, with: DateFormatter.yyyyMMdd))
     }
     
     var posterUrl: URL? {
