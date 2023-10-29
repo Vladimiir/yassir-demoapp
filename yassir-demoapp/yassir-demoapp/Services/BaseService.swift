@@ -10,16 +10,16 @@ import Foundation
 protocol IBaseService {
     
     /// Perform url with specified paramenters
-    func performRequest(with url: URL,
-                        type: Decodable.Type,
-                        handler: @escaping (Any?) -> ())
+    func performRequest<Response: Decodable>(with url: URL,
+                                             type: Response.Type,
+                                             handler: @escaping (Response?) -> ())
 }
 
 class BaseService: ObservableObject, IBaseService {
     
-    func performRequest(with url: URL,
-                        type: Decodable.Type,
-                        handler: @escaping (Any?) -> ()) {
+    func performRequest<Response: Decodable>(with url: URL,
+                                             type: Response.Type,
+                                             handler: @escaping (Response?) -> ()) {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("Bearer \(ServicesEndpoints.apiReadAccessToken)", forHTTPHeaderField: "Authorization")
