@@ -8,8 +8,6 @@
 import Foundation
 
 protocol IBaseService {
-    typealias Handler = (Result<Decodable, Error>) -> ()
-    
     /// Perform url with specified paramenters
     func performRequest<Response: Decodable>(with url: URL,
                                              type: Response.Type,
@@ -41,8 +39,6 @@ class BaseService: ObservableObject, IBaseService {
                     handler(.failure(APIError.parsingError))
                 }
             } else if let error = error {
-                print("HTTP Request Failed \(error)")
-                
                 if let urlError = error as? URLError {
                     if urlError.code == URLError.notConnectedToInternet {
                         handler(.failure(APIError.noInternet))
@@ -50,10 +46,12 @@ class BaseService: ObservableObject, IBaseService {
                         handler(.failure(APIError.notAuthorized))
                     } else if urlError.code == URLError.timedOut {
                         handler(.failure(APIError.noInternet))
+                    } else {
+                        handler(.failure(urlError))
                     }
+                } else {
+                    handler(.failure(error))
                 }
-                
-                handler(.failure(error))
             }
         }
         
