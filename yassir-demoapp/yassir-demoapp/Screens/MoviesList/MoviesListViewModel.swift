@@ -22,6 +22,7 @@ class MoviesListViewModel: ObservableObject {
     @Published var isLoadingMoviesFailed = false
     @Published var selectedSorting = MoviesService.SortBy.popularityDesc.rawValue
     let sortingList = MoviesService.SortBy.allCases.map { $0.rawValue }
+    var errorAPI: Error?
     
     private var page = 1
     
@@ -50,16 +51,17 @@ class MoviesListViewModel: ObservableObject {
     
     func fetchMoviesList() {
         moviesService.fetchMoviesList(page: page,
-                                      sortBy: selectedSorting) { moviesListModel in
+                                      sortBy: selectedSorting) { result in
             DispatchQueue.main.async {
-                self.isLoadingMoreMovies = false
-                self.isLoadingMovies = false
-                self.moviesListModel = moviesListModel
-
-                if let moviesListModel {
+                switch result {
+                case .success(let moviesListModel):
+                    self.isLoadingMoreMovies = false
+                    self.isLoadingMovies = false
+                    self.moviesListModel = moviesListModel
                     self.movies.append(contentsOf: moviesListModel.results)
                     self.isLoadingMoviesFailed = false
-                } else {
+                case .failure(let error):
+                    self.errorAPI = error
                     self.isLoadingMoviesFailed = true
                 }
             }

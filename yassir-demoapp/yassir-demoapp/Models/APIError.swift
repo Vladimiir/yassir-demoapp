@@ -10,6 +10,9 @@ import Foundation
 enum APIError: Error {
     case noInternet
     case notAuthorized
+    
+    case parsingError
+    case incorrectURL
 }
 
 // general api errors

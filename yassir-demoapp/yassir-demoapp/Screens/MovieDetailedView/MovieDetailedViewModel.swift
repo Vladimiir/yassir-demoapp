@@ -34,6 +34,8 @@ class MovieDetailedViewModel: ObservableObject {
          details?.genres ?? [])
     }
     
+    var errorAPI: Error?
+    
     var dataTuple: (title: String,
                     date: String,
                     description: String) {
@@ -51,9 +53,14 @@ class MovieDetailedViewModel: ObservableObject {
     }
     
     func onAppearEvent() {
-        moviesService.fetchMovieDetails(id: movieModel.id) { details in
+        moviesService.fetchMovieDetails(id: movieModel.id) { result in
             DispatchQueue.main.async {
-                self.details = details
+                switch result {
+                case .success(let details):
+                    self.details = details
+                case .failure(let error):
+                    self.errorAPI = error
+                }
             }
         }
     }

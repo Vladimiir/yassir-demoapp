@@ -17,45 +17,45 @@ protocol IMoviesService {
     ///   - handler: completion handler
     func fetchMoviesList(page: Int,
                          sortBy: String,
-                         handler: @escaping (MoviesListModel?) -> ())
+                         handler: @escaping (Result<MoviesListModel, Error>) -> ())
     
     func fetchMovieDetails(id: Int,
-                           handler: @escaping (MovieDetailsModel?) -> ())
+                           handler: @escaping (Result<MovieDetailsModel, Error>) -> ())
 }
 
 class MoviesService: BaseService, IMoviesService {
     
     func fetchMoviesList(page: Int,
                          sortBy: String,
-                         handler: @escaping (MoviesListModel?) -> ()) {
+                         handler: @escaping (Result<MoviesListModel, Error>) -> ()) {
         let url = URLConstructor.addParams(to: ServicesEndpoints.moviesPath,
                                            params: [.page : String(page),
                                                     .sortBy : sortBy])
         
         guard let url else {
-            handler(nil)
+            handler(.failure(APIError.incorrectURL))
             return
         }
         
         performRequest(with: url,
                        type: MoviesListModel.self) { result in
-            handler(result as? MoviesListModel)
+            handler(result)
         }
     }
     
     func fetchMovieDetails(id: Int,
-                           handler: @escaping (MovieDetailsModel?) -> ()) {
+                           handler: @escaping (Result<MovieDetailsModel, Error>) -> ()) {
         let url = URLConstructor.addParams(to: ServicesEndpoints.movieDetailsPath,
                                            addToPath: String(id))
         
         guard let url else {
-            handler(nil)
+            handler(.failure(APIError.incorrectURL))
             return
         }
         
         performRequest(with: url,
                        type: MovieDetailsModel.self) { result in
-            handler(result as? MovieDetailsModel)
+            handler(result)
         }
     }
 }
