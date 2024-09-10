@@ -24,8 +24,13 @@ class MovieDetailedViewModel: ObservableObject {
     
     var imdbTuple: (title: String,
                     url: URL?) {
-        ("Show in IMDB",
-         URL(string: "https://www.imdb.com/title/\(details?.imdbId ?? "")"))
+        var imdbUrl: URL?
+        
+        if let imdbId = details?.imdbId {
+            imdbUrl = URL(string: "https://www.imdb.com/title/\(imdbId)")
+        }
+
+        return ("Show in IMDB", imdbUrl)
     }
     
     var detailsTuple: (tagline: String,

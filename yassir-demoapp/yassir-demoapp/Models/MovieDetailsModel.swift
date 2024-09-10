@@ -15,7 +15,7 @@ struct MovieDetailsModel: Codable {
     }
     
     let genres: [Genre]
-    let imdbId: String
+    let imdbId: String?
     let tagline: String
     
     enum CodingKeys: String, CodingKey {
