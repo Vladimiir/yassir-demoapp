@@ -13,7 +13,7 @@ class MovieViewModel: ObservableObject {
     
     var dataTuple: (title: String, 
                     date: String) {
-        (movieModel.title,
+        (movieModel.title ?? "",
          DatesManager.string(from: movieModel.releaseDate, with: DateFormatter.MMMyyyy))
     }
     
